@@ -1,0 +1,10 @@
+- hosts: localhost
+
+  tasks:
+
+    - name: Test that my module works
+      forgetrigger:
+        projects: "{{ projects }}"
+      register: result
+
+    - debug: var=result

@@ -1,0 +1,45 @@
+---
+thalesforge_base_url: "@scm.thalesforge.thalesgroup.com/authscm/robot-cirrus/git'"
+
+base_version_dir: "/opt_for_runners/forgetrigger/versions"
+
+projects:
+  - name: "tomm"
+    app_services:
+      - service_name: "tomm"
+        thalesforge_url: "https://robot-cirrus:0D03m30rx8J1c78@scm.thalesforge.thalesgroup.com/authscm/robot-cirrus/git/tomm/tomm.git"
+    gitlab_trigger_url:  gitlab_trigger_base_url + '/293/trigger/pipeline'
+    gitlab_trigger_token: "{{ TOMM_TOKEN }}"
+    gitlab_trigger_ref: "automation"
+    confidential_level: "c1c2"
+
+  - name: "MCES"
+    app_services:
+      - service_name: "mces"
+        thalesforge_url: 'https://robot-cirrus:0D03m30rx8J1c78@scm.thalesforge.thalesgroup.com/authscm/robot-cirrus/git/mces/mces.git'
+    gitlab_trigger_url: gitlab_trigger_base_url + '/321/trigger/pipeline'
+    gitlab_trigger_token: "{{ MCES_TOKEN }}"
+    gitlab_trigger_ref: "automation"
+    confidential_level: "c3"
+
+  - name: "bpm"
+    app_services:
+      - service_name: "bpm"
+        thalesforge_url:  'https://robot-cirrus:0D03m30rx8J1c78@scm.thalesforge.thalesgroup.com/authscm/robot-cirrus/git/bpm-tsa-tav/bpm-tsa-tav.git'
+    gitlab_trigger_url: gitlab_trigger_base_url + '/142/trigger/pipeline'
+    gitlab_trigger_token: "{{ BPM_TOKEN }}"
+    gitlab_trigger_ref: "automation"
+    confidential_level: "c3"
+
+  - name: "TCIS"
+    app_services:
+      - service_name: "service1"
+        thalesforge_url: 'https://t0184119:Val12Reuil27-@scm.thalesforge.thalesgroup.com/authscm/t0184119/git/cirruspoc-app1/cirruspoc-app1.git'
+      - service_name: "service2"
+        thalesforge_url: 'https://t0184119:Val12Reuil27-@scm.thalesforge.thalesgroup.com/authscm/t0184119/git/cirruspoc-app2/cirruspoc-app2.git'
+      - service_name: "service3"
+        thalesforge_url: 'https://t0184119:Val12Reuil27-@scm.thalesforge.thalesgroup.com/authscm/t0184119/git/cirruspoc-app3/cirruspoc-app3.git'
+    gitlab_trigger_url:  gitlab_trigger_base_url + '/564/trigger/pipeline'
+    gitlab_trigger_token: "{{ TCIS_TOKEN }}"
+    gitlab_trigger_ref: "automation"
+    confidential_level: "c3"
